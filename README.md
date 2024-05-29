@@ -1,7 +1,7 @@
 # Welcome to Project Sẹo Lành!
 
 
-<a href="url"><img src="https://seolanh.github.io/static/media/logo.c34a144b2ccda0c56b6c.jpg" height="auto" width="200" style="border-radius:10px"></a>
+<img src="https://seolanh.github.io/static/media/logo.c34a144b2ccda0c56b6c.jpg" height="auto" width="200" style="border-radius:10px">
 
 
 ### Kính chào thầy cô và các bạn sinh viên! 
