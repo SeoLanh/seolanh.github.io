@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style type="text/css">
+    @keyframes icon {
+      0% {
+        transform: translate(12px, 80px) scale(0);
+      }
+      25% {
+        transform: translate(12px, 80px) scale(0);
+      }
+      50% {
+        transform: translate(12px, 80px) scale(1);
+      }
+      75% {
+        transform: translate(80px, 80px) scale(1);
+      }
+      100% {
+        transform: translate(148px, 80px) scale(1);
+      }
+    }
+    @keyframes icon-r {
+      0% {
+        transform: translate(148px, 80px) scale(1);
+      }
+      100% {
+        transform: translate(148px, 80px) scale(0);
+      }
+    }
+    @keyframes icon-c {
+      0% {
+        background: #abbd81;
+      }
+      25% {
+        background: #abbd81;
+      }
+      50% {
+        background: #abbd81;
+      }
+      75% {
+        background: #abbd81;
+      }
+      100% {
+        background: #abbd81;
+      }
+    }
+    .icon div {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transform: translate(80px, 80px) scale(1);
+      background: #abbd81;
+      animation: icon 1.4705882352941175s infinite cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    .icon div:nth-child(1) {
+      background: #abbd81;
+      transform: translate(148px, 80px) scale(1);
+      animation: icon-r 0.3676470588235294s infinite
+          cubic-bezier(0, 0.5, 0.5, 1),
+        icon-c 1.4705882352941175s infinite step-start;
+    }
+    .icon div:nth-child(2) {
+      animation-delay: -0.3676470588235294s;
+      background: #abbd81;
+    }
+    .icon div:nth-child(3) {
+      animation-delay: -0.7352941176470588s;
+      background: #abbd81;
+    }
+    .icon div:nth-child(4) {
+      animation-delay: -1.102941176470588s;
+      background: #abbd81;
+    }
+    .icon div:nth-child(5) {
+      animation-delay: -1.4705882352941175s;
+      background: #abbd81;
+    }
+    .loadingio-spinner-ellipsis-2by998twmg8 {
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    .icon {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateZ(0) scale(1);
+      backface-visibility: hidden;
+      transform-origin: 0 0; /* see note above */
+    }
+    .icon div {
+      box-sizing: content-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      padding: 0px;
+      margin: 0px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  </style>
+  <script>
+    function onLoad() {
+      const path = window.location.pathname;
+      const origin = window.location.origin;
+      if (!path.includes("?to=")) {
+        setTimeout(() => {
+          window.location.replace(origin + "?to=" + path);
+        }, 1000);
+      }
+    }
+  </script>
+  <body onload="onLoad()">
+    <div class="loadingio-spinner-ellipsis-2by998twmg8">
+      <div class="icon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+      Loading page . . .
+    </div>
+  </body>
+</html>
