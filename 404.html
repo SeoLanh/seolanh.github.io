@@ -109,6 +109,11 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
     }
   </style>
   <script>
@@ -118,11 +123,17 @@
       if (!path.includes("?to=")) {
         setTimeout(() => {
           window.location.replace(origin + "?to=" + path);
-        }, 1000);
+        }, 2000);
       }
     }
   </script>
   <body onload="onLoad()">
+    <img
+      src="https://seolanh.github.io/logo.png"
+      width="90"
+      draggable="false"
+    />
+    <h1>Sẹo Lành Project</h1>
     <div class="loadingio-spinner-ellipsis-2by998twmg8">
       <div class="icon">
         <div></div>
@@ -133,8 +144,6 @@
       </div>
     </div>
 
-    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
-      Loading page . . .
-    </div>
+    <div>Loading page . . .</div>
   </body>
 </html>
